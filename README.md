@@ -1,32 +1,49 @@
-# Forms — Perfil Digital (Escola Profissional Ruiz Costa)
+# Forms — Perfil Digital
 
-Site estático (HTML + CSS) para o evento Qualifica 2026 da Escola Profissional Ruiz Costa. Inclui um questionário de perfil digital.
+Site estático (HTML5 + CSS3) para o evento Qualifica 2026 da Escola Profissional Ruiz Costa. Inclui questionário de perfil digital com 10 perguntas e cálculo de resultado no frontend.
 
-## O que faz
+## Especificações técnicas
 
-- Página inicial com apresentação do evento
-- Questionário "Perfil Redes" (form3.html)
-- Design responsivo e navegação móvel
-- Ligação ao site oficial da escola
+| Item | Valor |
+|------|-------|
+| Tecnologias | HTML5, CSS3, JavaScript (vanilla) |
+| Backend | Nenhum (site estático) |
+| Base de dados | Nenhuma |
+| Armazenamento de dados do utilizador | Não armazena dados |
+| Design | Responsivo (media queries a partir de 768px) |
 
-## Tecnologias
+## Estrutura do repositório
 
-- HTML5
-- CSS3
-- Sem backend, sem base de dados (não armazena dados dos utilizadores)
+```
+forms/
+├── index.html          # Página inicial (hero + info cards + CTA)
+├── form3.html          # Questionário de perfil digital (10 perguntas)
+├── index.css           # Estilos da página inicial
+├── style.css           # Estilos do questionário
+├── script.js           # Lógica de cálculo do perfil (referenciado em form3.html)
+├── cropped-favicon-32x32.png
+├── ERC_hor_fundo.jpg   # Logotipo da escola
+└── README.md
+```
 
-## Como instalar
+## Funcionalidades
 
-1. Cola a pasta `forms` no teu servidor local (ex.: `C:\laragon\www\forms`)
-2. Inicia o Apache no Laragon/XAMPP (ou abre o `index.html` diretamente no browser)
-3. Acede a: `http://localhost/forms`
+- Navegação fixa com menu responsivo (toggle móvel).
+- Página inicial com secção hero, três cartões informativos e chamada para ação.
+- Questionário com 10 perguntas de escolha única (radio buttons).
+- Cálculo de perfil digital no frontend via JavaScript.
+- Sem envio de dados para servidor; nenhum dado do utilizador é armazenado.
 
-## Estrutura
+## Instalação
 
-- `index.html` — página inicial
-- `form3.html` — questionário de perfil digital
-- `index.css` / `style.css` — estilos
-- Imagens: favicon, logo da escola
+1. Copie a pasta `forms` para o diretório de documentos do servidor web (ex.: `C:\laragon\www\forms`).
+2. Inicie Apache ou abra o ficheiro `index.html` diretamente no navegador.
+3. Aceda a `http://localhost/forms`.
+
+## Notas
+
+- O questionário referencia `script.js`; certifique-se de que o ficheiro está presente na mesma pasta que `form3.html`.
+- Não há dependências externas, geradores de pacotes nem processo de build.
 
 ## Licença
 
